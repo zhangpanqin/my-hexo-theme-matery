@@ -1,0 +1,8 @@
+<script >
+   var OriginTitile = document.title;
+   var st;
+document.addEventListener("visibilitychange",
+    function _dynamicTitle() { 
+        document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) 
+        : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) });
+</script>

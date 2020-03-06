@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                <!-- <% if (config.subtitle && config.subtitle.length > 0) { %>
+                <%= config.subtitle %>
+                <% } else { %>
+                subtitle
+                <% } %> -->
+                <% if (is_archive()) { %>
+                <%= __('archives') %>
+                <% } else if (is_category()) { %>
+                <%= __('categories') %>
+                <% } else if (is_tag()) { %>
+                <%= __('tag') %>
+                <% } else if (page.title && page.title.length > 0) { %>
+                <%= __(page.title) %>
+                <% } else { %>
+                <%= config.subtitle%>
+                <% } %>
+            </div>
+
+            <div class="description center-align">
+                <span id="poem_sentence">正在加载今日诗词...</span>
+                <span id="poem_info"></span>
+                <!-- 每日切换诗词 -->
+                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+                <% if (config.description && config.description.length > 0) { %>
+                <!-- <%= config.description %> -->
+                <script>
+                    var sentence = document.querySelector("#poem_sentence");
+                    var info = document.querySelector("#poem_info");
+                    jinrishici.load(function (result) {
+                        // 自己的处理逻辑
+                        sentence.innerHTML = result.data.content;
+                        info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+                    });
+                </script>
+                <% } else { %>
+                This is your root _config.yml 'description' value.
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- partial('_partial/bg-cover-banner') %>

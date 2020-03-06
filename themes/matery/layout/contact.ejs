@@ -1,0 +1,26 @@
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+    <div id="contact" class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-comments"></i>&nbsp;&nbsp;<%= __('contact') %>
+                </div>
+                <%- page.content %>
+            </div>
+        </div>
+        <div class="card">
+            <% if (theme.gitalk && theme.gitalk.enable) { %>
+            <%- partial('_partial/gitalk') %>
+            <% } %>
+
+            <!-- 聊天工具 -->
+            <%- partial('_partial/chat-tidio') %>
+
+            <% if (theme.valine && theme.valine.enable) { %>
+            <%- partial('_partial/valine') %>
+            <% } %>
+        </div>
+    </div>
+</main>

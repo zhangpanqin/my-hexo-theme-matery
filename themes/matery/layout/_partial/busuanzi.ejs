@@ -1,0 +1,21 @@
+<!-- 不蒜子统计网站数据 -->
+<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+
+<script>
+    
+    function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "<%- theme.libs.js.busuanzi %>";
+        element.async = true; 
+        document.body.appendChild(element);
+    }
+    if (window.addEventListener){
+        window.addEventListener("load", downloadJSAtOnload, false);
+    }
+    else if (window.attachEvent){
+        window.attachEvent("onload", downloadJSAtOnload);
+    }
+    else window.onload = downloadJSAtOnload;
+</script>
+<!-- <script async src="<%- theme.libs.js.busuanzi %>"></script> -->
+<% } %>

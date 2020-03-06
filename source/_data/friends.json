@@ -1,0 +1,16 @@
+[
+    {
+        "name": "我的公众号",
+        "url": "https://juejin.im/user/5b656975f265da0f900e361f",
+        "title": "微信公众号",
+        "introduction": "我的微信公众号，欢迎大家关注",
+        "avatar": "/medias/avatars/gongzhonghaotouxiang.jpg"
+    },
+    {
+        "name": "我的掘金",
+        "url": "https://juejin.im/user/5b656975f265da0f900e361f",
+        "title": "掘金主页",
+        "introduction": "我的掘金主页，欢迎大家关注",
+        "avatar": "/medias/avatars/my-pic.jpeg"
+    }
+]

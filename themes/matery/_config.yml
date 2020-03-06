@@ -1,0 +1,389 @@
+# 配置菜单导航的名称、路径和图标icon.
+menu:
+  Index:
+    url: /
+    icon: fas fa-home
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-bookmark
+  Archives:
+    url: /archives
+    icon: fas fa-archive
+  About:
+    url: /about
+    icon: fas fa-address-book
+  Friends:
+    url: /friends
+    icon: fas fa-link
+  Contact:
+    url: /contact
+    icon: fas fa-comment
+#  二级菜单写法如下
+#   Medias:
+#    icon: fas fa-list
+#    children:
+#      - name: Musics
+#        url: /musics
+#        icon: fas fa-music
+#      - name: Movies
+#        url: /movies
+#        icon: fas fa-film
+#      - name: Books
+#        url: /books
+#        icon: fas fa-book
+#      - name: Galleries
+#        url: /galleries
+#        icon: fas fa-image
+
+# 站点运行开始时间.
+time:
+  enable: true
+  year: 2020 # 年份
+  month: 02 # 月份
+  date: 28 # 日期
+  hour: 00 # 小时
+  minute: 00 # 分钟
+  second: 00 # 秒
+
+# 首页封面轮播图的相关配置.
+cover:
+  showPrevNext: true # 是否显示左右切换按钮. Whether to display the left and right toggle buttons.
+  showIndicators: true # 是否显示指示器. # Whether to display the indicators
+  autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
+  duration: 120 # 切换延迟时间. Switching delay time.
+  intervalTime: 6500 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
+
+# index page dream text,
+# 配置首页显示"梦想"的语句.
+dream:
+  enable: false
+  showTitle: true
+  title: 神秘嘉宾
+  text: 我搬到谁的隔壁，谁成了我的邻居。鸣谢生命有你参与，笑纳我的邀请。
+
+# 是否在首页显示音乐.
+music:
+  enable: true
+  showTitle: true
+  title: 听听音乐
+  fixed: false # 开启吸底模式
+  autoplay: false # 是否自动播放
+  theme: '#542674'
+  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'list' # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false # 列表默认折叠
+  listMaxHeight: #列表最大高度
+
+# 是否在首页显示视频.
+video:
+  enable: false
+  showTitle: true
+  title: 邓紫棋 - 差不多姑娘
+  url: /medias/video/chabuduoguniang.mp4 # 必填
+  pic:
+  thumbnails:
+  height: # 如：400
+  autoplay: false # 是否自动播放
+  theme: '#42b983'
+  loop: false # 是否循环播放
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7
+
+# 是否显示推荐文章的标题
+recommend:
+  enable: true
+  showTitle: true
+
+# 配置网站favicon和网站LOGO
+favicon: /medias/favicon.ico
+logo: /medias/favicon.ico
+
+# 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
+indexbtn:
+  enable: true
+  name: Github
+  icon: fab fa-github-alt
+  url: https://github.com/zhangpanqin
+
+# 首页 banner 中的第二行个人信息配置，留空即不启用
+socialLink:
+  qq: 676565498
+  github: https://github.com/zhangpanqin
+  weibo: 
+  email: zhangpanqin@outlook.com
+  rss: true
+
+# 配置文档目录开启功能
+# 可以在某篇文章的 Front-matter 中再加上`toc: false`，使该篇文章关闭TOC目录功能
+toc:
+  enable: true
+  heading: h1, h2, h3, h4
+  showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
+  collapseDepth: 0 # 目录默认展开层级
+
+tidio:
+    enable: true
+    public_key: eyql48jbswtybuafxmpujxtciuqrpw2k
+
+# 代码块相关
+code:
+  lang: true # 代码块是否显示名称
+  copy: true # 代码块是否可复制
+  shrink: true # 代码块是否可以收缩
+  break: true # 代码是否折行
+
+# 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
+reward:
+  enable: true
+  title: 你的赏识是我前进的动力
+  wechat: /medias/reward/weixinzhifuerweima.jpeg
+  alipay: /medias/reward/zhifuzhifuerweima.jpeg
+
+# 是否激活复制文章时追加博客和作者的版权信息.
+copyright:
+  enable: true
+  minCharNumber: 150 # 至少复制多少个字符就追加版权信息.
+  description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
+
+# 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，
+# 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.
+mathjax:
+  enable: true
+  cdn: https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# 文章字数统计、阅读时长、总字数统计
+# 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
+postInfo:
+  date: true # 发布日期
+  update: false # 更新日期
+  wordCount: true # 文章字数统计
+  totalCount: true # 站点总文章字数
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
+
+# 是否激活点击页面的'爱心'效果，默认激活.
+clicklove:
+  enable: true
+
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
+profile:
+  avatar: /medias/avatars/my-pic.jpeg
+  career: java | 前端 
+  introduction: 技术如果不在于折腾,那会很无趣地!
+
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myProjects:
+  enable: false
+  data:
+    hexo-theme-matery:
+      icon: fas fa-file-alt
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: http://github.com/blinkfox/hexo-theme-matery
+      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+    Fenix:
+        icon: fas fa-database
+        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+        url: https://github.com/blinkfox/fenix
+        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
+    typora-vue-theme:
+        icon: fas fa-file-alt
+        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+        url: https://github.com/blinkfox/typora-vue-theme
+        desc: This is a typora theme inspired by Vue document style.
+# config my skills informations in about page.
+# If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+mySkills:
+  enable: true
+  data:
+    Java:
+      background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
+      percent: 85%
+    Javascript:
+      background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
+      percent: 80%
+    SpringBoot:
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
+      percent: 85%
+    SpringCloud:
+      background: 'linear-gradient(to right, #951213 0%, #961117 100%)'
+      percent: 60%
+    Vue:
+      background: 'linear-gradient(to right, #F12F12 0%, #F6464F 100%)'
+      percent: 75%
+    Sql:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 75%
+    Shell:
+      background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
+      percent: 70%
+    Html:
+      background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
+      percent: 50%
+
+# 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myGallery:
+  enable: true
+  data:
+    - /medias/featureimages/0.jpg
+    - /medias/featureimages/1.jpg
+    - /medias/featureimages/2.jpg
+
+# 设置在归档页面中是否显示'文章日历'控件
+postCalendar: true
+
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: true
+  owner: 
+  repo: 
+  oauth:
+    clientId: 
+    clientSecret: 
+  admin: 
+# 以下几个没有多大用处,不开启-----begin
+gitment:
+  enable: false
+disqus:
+  enable: false
+livere:
+  enable: false
+
+# 不登录就留言,需要去官网申请
+valine:
+  enable: true
+  # 填写你申请的 appId
+  appId: 
+  # 填写 key
+  appKey: 
+  notify: false
+  verify: false
+  visitor: true
+  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  pageSize: 10
+  placeholder: 'just go go' # Comment Box placeholder
+  background: /medias/comment_bg.png
+# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
+githubLink:
+  enable: true
+  url: https://github.com/zhangpanqin
+  title: GitHub
+
+# 阅读文章的密码验证功能，如要使用此功能请激活该配置项，并在对应文章的Front-matter中写上'password'的键和加密后的密文即可.
+# 请注意：为了保证密码原文不会被泄露到网页中，文章的密码必须是通过'SHA256'加密的，这样就不会被破解.
+verifyPassword:
+  enable: true
+  promptMessage: 请输入访问本文章的密码
+  errorMessage: 密码错误，将返回主页！
+
+# 不蒜子(http://busuanzi.ibruce.info/) 网站统计,为了网站加载速度,我没有开启关闭
+busuanziStatistics:
+  enable: false
+  totalTraffic: true # 总访问量
+  totalNumberOfvisitors: true # 总人次
+
+# Add google analytics configuration
+# 添加 Google Analytics 配置
+googleAnalytics:
+  enable: true
+  # 谷歌分析配置申请之后填写你的 id
+  id: 
+baiduAnalytics:
+    enable: true
+    # 百度分析 id
+    id: 
+# 推送你需要让百度索引的链接
+baiduPush: true
+
+
+# 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
+libs:
+  css:
+    fontAwesome: /libs/awesome/css/all.min.css # V5.12.1
+    materialize: /libs/materialize/materialize.min.css # 1.0.0
+    aos: /libs/aos/aos.css
+    animate: /libs/animate/animate.min.css # V3.5.1
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css # V1.6.11
+    aplayer: /libs/aplayer/APlayer.min.css
+    dplayer: /libs/dplayer/DPlayer.min.css
+    gitalk: /libs/gitalk/gitalk.css
+    jqcloud: /libs/jqcloud/jqcloud.css
+    tocbot: /libs/tocbot/tocbot.css
+  js:
+    jquery: /libs/jquery/jquery.min.js
+    materialize: /libs/materialize/materialize.min.js # 1.0.0
+    masonry: /libs/masonry/masonry.pkgd.min.js # v4.0.0
+    aos: /libs/aos/aos.js
+    scrollProgress: /libs/scrollprogress/scrollProgress.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js # V1.6.11
+    clicklove: /libs/others/clicklove.js
+    busuanzi: /libs/others/busuanzi.pure.mini.js
+    aplayer: /libs/aplayer/APlayer.min.js
+    dplayer: /libs/dplayer/DPlayer.min.js
+    crypto: /libs/cryptojs/crypto-js.min.js
+    echarts: /libs/echarts/echarts.min.js
+    gitalk: /libs/gitalk/gitalk.min.js
+    valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
+    tocbot: /libs/tocbot/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbonRefresh: /libs/background/ribbon-refresh.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    instantpage: /libs/instantpage/instantpage.js
+
+# The post featured images that needs to be displayed when there is no image.
+# 无文章特色图片时需要显示的文章特色图片.
+featureImages: 
+- /medias/featureimages/0.jpg
+- /medias/featureimages/1.jpg
+- /medias/featureimages/2.jpg
+- /medias/featureimages/3.jpg
+- /medias/featureimages/4.jpg
+- /medias/featureimages/5.jpg
+- /medias/featureimages/6.jpg
+- /medias/featureimages/7.jpg
+- /medias/featureimages/8.jpg
+
+# 转载协议
+reprint:
+  enable: true # whether enable reprint section 是否启用“转载规则限定模块”
+  default: cc_by
+
+
+# sharejs文章分享模块.
+# 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
+sharejs:
+  enable: false
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+
+
+# 手机二级菜单.
+navMenu:
+  mleft: true # 二级侧栏子菜单是否对齐左边
+  bgColor: "" # 二级侧栏子菜单背景颜色,留空即为全局背景色
+
+# 网页预加载.
+instantpage:
+  enable: true
+
+# banner 是否每日切换.
+# 若为 false, 则 banner 默认为 /medias/banner/0.jpg
+banner:
+  enable: true
+
+#ICP备案信息尾部显示
+icp:
+  enable: true
+  url:  # 备案链接
+  text:  # 备案信息
+
+# 静态资源前缀路径
+jsDelivr:
+    url: 
+    # url: http://localhost:4000
