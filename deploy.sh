@@ -24,7 +24,7 @@ fi
 public=${BASE_DIR}/public
 
 if [ -d ${public} ]; then
-    scp -rp ${public}/* mflyyou@47.104.168.20:/usr/share/nginx/html/
+    scp -rp ${public}/* 用户名@ip:/usr/share/nginx/html/
     echo "部署成功"
 else
     echo "${public} 不存在,部署失败"

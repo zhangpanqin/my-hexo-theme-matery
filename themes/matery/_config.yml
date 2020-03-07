@@ -126,9 +126,6 @@ toc:
   showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
   collapseDepth: 0 # 目录默认展开层级
 
-tidio:
-    enable: true
-    public_key: eyql48jbswtybuafxmpujxtciuqrpw2k
 
 # 代码块相关
 code:
@@ -178,23 +175,13 @@ profile:
 
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: false
+  enable: true
   data:
-    hexo-theme-matery:
+    my-hexo-theme-matery:
       icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    Fenix:
-        icon: fas fa-database
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
-    typora-vue-theme:
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+      url: https://github.com/zhangpanqin/my-hexo-theme-matery
+      desc: 基于 hexo-theme-matery 改造的自己的主题
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
@@ -253,6 +240,9 @@ disqus:
   enable: false
 livere:
   enable: false
+tidio:
+    enable: true
+    public_key: 
 
 # 不登录就留言,需要去官网申请
 valine:

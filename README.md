@@ -1,4 +1,4 @@
-## 开发运维
+## hexo 使用
 
 ```bash
 # 清楚构建生成的 public 目录
@@ -13,17 +13,9 @@ hexo s
 
 ### 文章编写
 
-### 命令生成 md 文件
-
 ```bash
-hexo new [layout] <title>
+hexo new post <title>
 ```
-
-| layout  | 路径             |
-| :------ | :--------------- |
-| `post`  | `source/_posts`  |
-| `page`  | `source`         |
-| `draft` | `source/_drafts` |
 
 #### 示例
 
@@ -65,25 +57,18 @@ tags:
 | keywords      | 文章标题                       | 文章关键字，SEO 时需要                                                                                                                                                                     |
 | reprintPolicy | cc_by                          | 文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个                                                                        |
 
-### 百度统计
+## 搭建教程
 
-https://tongji.baidu.com/
+我写的关于 [hexo,搭建个人博客](http://mflyyou.cn/2020/03/06/hexo-da-jian-ge-ren-bo-ke/)
 
-![image-20200303223829677](http://oss.mflyyou.cn/blog/20200303223829.png)
-
-![image-20200304011045936](http://oss.mflyyou.cn/blog/20200304011045.png)
-
-### 目录介绍
-
-### 局部模版（Partial）
-
-### 部署
+## 部署
 
 执行脚本 deploy.sh 会将构建好的 public 下的资源复制到远程服务器上
 
 
-### 感谢
+## 感谢
 
 感觉开源的 hexo 主题 [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)
 
-感谢韦阳的开源贡献，让我节省了大量时间原地址：[hexo-matery-modified](https://github.com/godweiyang/hexo-matery-modified)
+感谢韦阳，让我节省了大量时间。[hexo-matery-modified](https://github.com/godweiyang/hexo-matery-modified)
+
